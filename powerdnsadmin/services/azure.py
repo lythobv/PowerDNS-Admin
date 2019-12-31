@@ -33,6 +33,6 @@ def azure_oauth():
             return 'Access denied: reason=%s error=%s' % (
                 request.args['error'], request.args['error_description'])
         session['azure_token'] = (token)
-        return redirect(url_for('.login', _external=True, _scheme='https'))
+        return redirect(url_for('index.login', _external=True, _scheme='https'))
 
     return azure
